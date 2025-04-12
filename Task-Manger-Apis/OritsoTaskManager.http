@@ -1,0 +1,6 @@
+@OritsoTaskManager_HostAddress = http://localhost:5213
+
+GET {{OritsoTaskManager_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
