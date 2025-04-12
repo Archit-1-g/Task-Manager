@@ -1,0 +1,30 @@
+<app-header></app-header>
+<div class="task-edit-wrapper">
+  <div class="task-edit-card">
+    <h2>Edit Task</h2>
+    <form (ngSubmit)="updateTask()">
+      <div class="form-group">
+        <label>Title</label>
+        <input class="form-control" [(ngModel)]="task.title" name="title" required>
+      </div>
+      <div class="form-group">
+        <label>Description</label>
+        <textarea class="form-control" [(ngModel)]="task.description" name="description" required></textarea>
+      </div>
+      <div class="form-group">
+        <label>Due Date</label>
+        <input type="date" class="form-control" [(ngModel)]="task.dueDate" name="dueDate" required>
+      </div>
+      <div class="form-group">
+        <label>Status</label>
+        <select class="form-control" [(ngModel)]="task.status" name="status">
+          <option>Pending</option>
+          <option>In Progress</option>
+          <option>Completed</option>
+        </select>
+      </div>
+      <button type="submit" class="btn btn-success">Update</button>
+    </form>
+  </div>
+</div>
+<app-footer></app-footer>
